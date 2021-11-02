@@ -1,0 +1,10 @@
+DROP TABLE users;
+
+CREATE TABLE IF NOT EXISTS users (
+    id TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    name TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW(),
+    PRIMARY KEY(id)
+);
